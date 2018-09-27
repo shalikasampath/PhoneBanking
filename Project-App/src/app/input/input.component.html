@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <style>  
+      .button {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+      
+      </style>
+<script>
+    
+    
+    
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <!--<a class="navbar-brand" href="#">Logo</a>-->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a class="navbar-brand" href="#"><img src="E:\PROJECT\logo2.jpg" width="25" height="35"></a><li>
+        <li class="active"><a href="#">Home</a></li>
+        <!-- <li><a href="#">Savings</a>
+        </li>
+        <li><a href="#">Loan</a></li>
+        <li><a href="#">CREDIT CARD</a></li> -->
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+  
+    </header>
+    <div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+        <img src="E:\PROJECT\logo4.jpg">
+     <h1><b>WELCOME TO MOBILE BANKING</b></h1>
+     <div class="panel panel-warning">
+      <div class="panel-heading">Security Tips</div>
+      <div class="panel-body"><p>Kindly enter your correct mobile number</p></div>
+    </div>    
+         </div>
+    <div class="col-sm-2 sidenav">
+      <!--<div class="well">
+       
+      </div>
+      <div class="well">
+        
+      </div>-->
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-lg-12">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-6">
+								<form id="login-form" action="" method="post" role="form" style="display: block;">
+									<div class="form-group" style="border :solid slateblue 0.5px">
+										<input [(ngModel)]="phone" type="text" name="phone" id="mobnum" pattern="[0-9]{10}" tabindex="1" class="form-control" placeholder="Mobile number" value="">
+                                        
+                                    </div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-12 col-sm-offset-3">
+												 <button type="button" class="button" (click)="checkCust(phone)">
+                                                     <span class="glyphicon glyphicon-earphone"></span> DIAL
+                                                      </button>
+
+											</div>
+										</div>
+									</div>
+									
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+			
+</html>
