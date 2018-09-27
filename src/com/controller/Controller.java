@@ -14,7 +14,7 @@ public static int count = 0;
 				(s.contains("saving") && s.contains("credit") && s.contains("loan"))
 				||(s.contains("saving") && s.contains("credit"))
 				||(s.contains("credit") && s.contains("loan"))
-				||(s.contains("saving") && s.contains("loan"))
+				||(s.contains("saving") && s.contains("loan")) 
 		  )
 		{
 			/*error stuff*/
@@ -28,7 +28,7 @@ public static int count = 0;
 		else if(s.contains("credit"))
 		{System.out.println("in credit");
 		a.credit(s,phone);}
-		else if(s.contains("loan"))
+		else if((s.contains("loan")||(s.contains("emi")||(s.contains("pending_amt")||(s.contains("emi_due_date"))))))
 		{
 			System.out.println("in loan");
 			a.loan(s,phone);}
