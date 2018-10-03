@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://cdn.pubnub.com/pubnub-3.15.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+</head>
+<body>
+<div class="container" ng-app="PubNubAngularApp" ng-controller="MySpeechCtrl">
+
+  <pre>NOTE: Requires Chrome Desktop or Android Browser</pre>
+
+  <h3>MyText to Speech</h3>
+
+  <textarea ng-model="theText" rows="10" cols="40"></textarea>
+  <input type="button" ng-click="sayIt()" value="Say it!" />
+</div>
+
+<script>
+angular.module('PubNubAngularApp', ["pubnub.angular.service"])
+.controller('MySpeechCtrl', function($rootScope, $scope, Pubnub) {
+  $scope.theText = "Welcome to the speech enabled world!";
+  $scope.sayIt = function () {
+      window.speechSynthesis.speak(new SpeechSynthesisUtterance($scope.theText));
+  };
+});
+</script>
+</body>
+</html>
