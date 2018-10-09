@@ -4,39 +4,34 @@ import com.project.service.CustomerService;
 
 public class Controller {
 
-	static CustomerService a = new CustomerService();
-public static int count = 0;
-	public static void flow(String s1,String phone)
+	public static void flow(String speech,String phone)
 	{	
+		
 		System.out.println("in flow");
-		String s = s1.toLowerCase();
-		if(
-				(s.contains("saving") && s.contains("credit") && s.contains("loan"))
-				||(s.contains("saving") && s.contains("credit"))
-				||(s.contains("credit") && s.contains("loan"))
-				||(s.contains("saving") && s.contains("loan")) 
-		  )
-		{
-			/*error stuff*/
-			a.errorfunc();
-		}
-		else if(s.contains("saving"))
+		String speech_text = speech;
+
+		 if(speech_text.contains("saving"))
 		{
 			System.out.println("in saving");
-			a.saving(s,phone);
-			}
-		else if(s.contains("credit"))
-		{System.out.println("in credit");
-		a.credit(s,phone);}
-		else if((s.contains("loan")||(s.contains("emi")||(s.contains("pending_amt")||(s.contains("emi_due_date"))))))
+			CustomerService.saving(speech_text,phone);
+		}
+		else if(speech_text.contains("credit"))
+		{
+			System.out.println("in credit");
+			CustomerService.credit(speech_text,phone);
+		}
+		else if(speech_text.contains("loan")||speech_text.contains("lone")||speech_text.contains("emi")||speech_text.contains("pending")||speech_text.contains("principle")||(speech.contains("principal")))
 		{
 			System.out.println("in loan");
-			a.loan(s,phone);}
-		
+			CustomerService.loan(speech_text,phone);
+		}
+		else if(speech_text.contains("abcd"))
+		{
+			CustomerService.new_service(phone);
+		}
 		else
 		{
-			/*error stuff*/
-			a.errorfunc();
+			CustomerService.errorfunc(phone);
 		}
 		
 		
